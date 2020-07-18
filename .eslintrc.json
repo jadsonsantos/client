@@ -2,7 +2,12 @@
     "env": {
         "browser": true,
         "es2020": true
-    },
+	},
+	"settings": {
+		"react": {
+			"version": "detect"
+		}
+	},
     "extends": [
         "eslint:recommended",
         "plugin:react/recommended",
@@ -17,9 +22,15 @@
         "sourceType": "module"
     },
     "plugins": [
-        "react",
+		"react",
+		"react-hooks",
         "@typescript-eslint"
     ],
     "rules": {
+		"react-hooks/rules-of-hooks": "error",
+		"react-hooks/exhaustive-deps": "warn",
+		"react/prop-types": "off",
+		"react/react-ini-jsx-scope": "off",
+		"@typescript-eslint/explicit-module-boundary-types": "off"
     }
 }
